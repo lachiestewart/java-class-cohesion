@@ -1,0 +1,21 @@
+{
+  "name": "seng401-assignment-1",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "jpeek": "java -jar jpeek.jar --overwrite --sources ./projects --target ./jpeek",
+    "getProjects": "node getProjects.js",
+    "compileProjects": "./compileScript.sh",
+    "start": "npm run getProjects && npm run compileProjects && npm run jpeek"
+  },
+  "keywords": [],
+  "author": "Lachlan Stewart",
+  "license": "ISC",
+  "description": "Pulls the top 100 open source Java projects from GitHub and assesses their class cohesion using JPeek",
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "dotenv": "^16.4.7",
+    "octokit": "^4.1.2"
+  }
+}
